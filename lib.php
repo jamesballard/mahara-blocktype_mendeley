@@ -65,7 +65,7 @@ class PluginBlocktypeMendeley extends SystemBlocktype {
 		require_once(get_config('docroot') . 'blocktype/mendeley/mendeley.php');
 		$mendeley = new Mendeley();
 		
-		if($result = $mendeley->get('folders/'.$configdata['folder'])) { // get the folder record from Mendeley
+		if(!empty($configdata['folder']) && $result = $mendeley->get('folders/'.$configdata['folder'])) { // get the folder record from Mendeley
 		
 			$documents = array();
 			
@@ -130,7 +130,7 @@ class PluginBlocktypeMendeley extends SystemBlocktype {
 			return $smarty->fetch('blocktype:mendeley:apa.tpl');
 		}else{
 			$smarty = smarty_core();
-			return $smarty->fetch('blocktype:mendeley:noavailable.tpl');
+			return $smarty->fetch('blocktype:mendeley:notavailable.tpl');
 		}
     }
 
