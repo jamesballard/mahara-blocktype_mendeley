@@ -1,0 +1,47 @@
+-----
+About
+=====
+
+Mendeley (http://www.mendeley.com) is a reference management tool with a range of features.
+
+One is the ability to group document lists into folders within your library. However it is not easy to share these with other users.
+
+This plug-in allows you to select a folder from your Mendeley library and display the documetns within Mahara, utilising Mahara to manage sharing permissions.
+
+---
+Use
+===
+
+Before using this plugin the user will need to have an account with Mendeley. This will trigger an OAuth exchange. Note that the OAuth exchange should only be required once and is not required to access your folders and not for accessing the document list (this is very nice for sharing as viewers do not need Mendeley accounts).
+
+When editing the contents of a Mahara Page (View), drag the Mendeley icon from the 'External content' tab into your Page (View)
+
+You will be provided with a list of your folders (or collections) - choose one and the contents will be displayed in the block.
+
+------------
+Installation
+============
+
+Extract and rename the downloaded folder as 'mendeley' and place in your Mahara blocktype directory: mahara/blocktype
+
+Register your site for a Mendeley Developer API key: http://dev.mendeley.com/
+
+Within Mahara Go to Site Administration -> Extensions 
+
+Install the Mendeley blocktype
+
+Copy the "Consumer Key" and "Consumer Secret" into the configuration area for the blocktype. 
+
+------------
+Requirements
+============
+
+This is only tested for Mahara 1.4.x and will be updated for future releases. 
+
+-------
+Credits
+=======
+
+This builds on the Mendeley API Client by Jakob Stoeck
+
+https://github.com/jakob-stoeck/mendeleyapi
